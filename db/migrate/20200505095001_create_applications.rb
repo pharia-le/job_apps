@@ -1,6 +1,6 @@
 class CreateApplications < ActiveRecord::Migration
   def change
-    create_table :users do |t|
+    create_table :applications do |t|
       t.string :company
       t.string :position
       t.string :deadline
