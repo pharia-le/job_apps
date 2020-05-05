@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(version: 20200505095001) do
     t.string  "company"
     t.string  "position"
     t.string  "deadline"
-    t.string  "desccription"
+    t.string  "description"
     t.string  "comments"
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "fname"
+    t.string "lname"
     t.string "email"
     t.string "password_digest"
   end

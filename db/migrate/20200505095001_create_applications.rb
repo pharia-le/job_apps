@@ -4,7 +4,7 @@ class CreateApplications < ActiveRecord::Migration
       t.string :company
       t.string :position
       t.string :deadline
-      t.string :desccription
+      t.string :description
       t.string :comments
       t.integer :user_id
     end
