@@ -8,7 +8,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if logged_in?
+      erb :'users/home'
+    else
+      erb :'homepage'
+    end
   end
 
   helpers do
