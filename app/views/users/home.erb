@@ -1,1 +1,22 @@
-Hello
+<a href="/sessions/logout">Log Out</a><br>
+<br>
+"Welcome, <%=@user.fname%>!"
+
+<table style="width:100%">
+  <tr>
+    <th>Company</th>
+    <th>Position</th>
+    <th>Deadline</th>
+    <th>Description</th>
+    <th>Comments</th>
+  </tr>
+  <% @user.applications.each do |app|%>
+   <tr>
+      <td><a href="/applications/<% app.id %>"><%= app.company %></td>
+      <td><a href="/applications/<% app.id %>"><%= app.position %></td>
+      <td><a href="/applications/<% app.id %>"><%= app.deadline %></td>
+      <td><a href="/applications/<% app.id %>"><%= app.description %></td>
+      <td><a href="/applications/<% app.id %>"><%= app.comments %></td>
+   </tr>
+  <% end %>
+</table>
