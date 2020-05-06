@@ -2,21 +2,39 @@
 <br>
 "Welcome, <%=@user.fname%>!"
 
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+
 <table style="width:100%">
+<caption>Job Applications</caption>
   <tr>
     <th>Company</th>
     <th>Position</th>
     <th>Deadline</th>
     <th>Description</th>
     <th>Comments</th>
+    <th>View</th>
   </tr>
   <% @user.applications.each do |app|%>
    <tr>
-      <td><a href="/applications/<% app.id %>"><%= app.company %></td>
-      <td><a href="/applications/<% app.id %>"><%= app.position %></td>
-      <td><a href="/applications/<% app.id %>"><%= app.deadline %></td>
-      <td><a href="/applications/<% app.id %>"><%= app.description %></td>
-      <td><a href="/applications/<% app.id %>"><%= app.comments %></td>
+      <td><%= app.company %></td>
+      <td><%= app.position %></td>
+      <td><%= app.deadline %></td>
+      <td><%= app.description %></td>
+      <td><%= app.comments %></td>
+      <td><a href="/applications/<%= app.id %>">View</td>
    </tr>
   <% end %>
 </table>
+<br>
+<a href="/applications">Create New App</a><br>

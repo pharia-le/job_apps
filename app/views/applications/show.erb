@@ -1,0 +1,14 @@
+Company: <%= @application.company %><br>
+Position: <%= @application.position %><br>
+Deadline: <%= @application.deadline %><br>
+Description: <%= @application.description %><br>
+Comments: <%= @application.comments %><br>
+
+<form method="get" action="/applications/<%= @application.id %>/edit">
+    <input type="submit" value="edit">
+</form>
+
+<form method="post" action="/applications/<%= @application.id %>">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+</form>

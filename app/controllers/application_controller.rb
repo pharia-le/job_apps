@@ -38,6 +38,12 @@ class ApplicationController < Sinatra::Base
         redirect '/users/home'
       end
     end
+
+    def redirect_if_not_users_app
+      if current_user != @application.user
+        redirect '/applications'
+      end
+    end
   end
   
 end
