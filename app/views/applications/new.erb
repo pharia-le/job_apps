@@ -3,9 +3,21 @@
 <h1>Create a New Application</h1><br>
 Company: <input type="text" name="application[company]" placeholder="Input" required autofocus><br>
 Position: <input type="text" name="application[position]" placeholder="Input" required><br>
-Deadline: <input type="date" name="application[deadline]" placeholder="Input" required><br>
+Status:
+  <input type="radio" id="Ready to Apply" name="application[status]" value="Ready to Apply">
+  <label for="Ready to Apply">Ready to Apply</label>
+    <input type="radio" id="Applied" name="application[status]" value="Applied">
+  <label for="Applied">Applied</label>
+    <input type="radio" id="Signed" name="application[status]" value="Signed">
+  <label for="Signed">Signed</label>
+    <input type="radio" id="Interview Scheduled" name="application[status]" value="Interview Scheduled">
+  <label for="Interview Scheduled">Interview Scheduled</label>
+    <input type="radio" id="Archived" name="application[status]" value="Archived">
+  <label for="Archived">Archived</label><br>
+
+Next Deadline: <input type="date" name="application[deadline]" placeholder="Input" required><br>
 Description: <input type="text" name="application[description]" placeholder="Input" required><br>
-Comments: <input type="text" name="application[comments]" placeholder="Input" required><br>
+Comments: <input type="text" name="application[comments]" size="75" placeholder="Input" required><br>
 <input type="submit" value="Create Application">
 </form>
 

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20200505095001) do
   create_table "applications", force: :cascade do |t|
     t.string  "company"
     t.string  "position"
+    t.string  "status"
     t.string  "deadline"
     t.string  "description"
     t.string  "comments"

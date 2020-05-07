@@ -3,6 +3,12 @@
 
 Company: <input type="text" name="application[company]" placeholder="<%= @application.company %>"  ><br>
 Position: <input type="text" name="application[position]" placeholder="<%= @application.position %>" ><br>
+Status: 
+<% ["Ready to Apply", "Applied", "Signed", "Interview Scheduled", "Archived"].each do |status| %>
+    <input type="radio" id=<%= status %> name="application[status]" value=<%= status %>>
+    <label for=<%= status %>><%= status %></label>
+<% end %><br>
+
 Deadline: <input type="date" name="application[deadline]" placeholder="<%= @application.deadline %>" ><br>
 Description: <input type="text" name="application[description]" placeholder="<%= @application.description %>" ><br>
 Comments: <input type="text" name="application[comments]" placeholder="<%= @application.comments %>" ><br>

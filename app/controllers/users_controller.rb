@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     end
 
     post '/registrations' do
+        if !!User.find_by(email: params[:user][:email])
+            redirect '/registrations/signup'
+        end
         user = User.new(params[:user])
         user.save
         session[:user_id] = user.id 
